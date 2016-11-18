@@ -12,7 +12,7 @@
     <meta name="keywords" content="">
 
     <title>
-        Medi
+        About Us
     </title>
 
     <meta name="keywords" content="">
@@ -39,22 +39,14 @@
     <script src="<?php echo base_url(); ?>/js/respond.min.js"></script>
 
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/img/icon.png">
-
-    <style>
-        .nav .navbar-nav > .active{
-            color: #000;
-           background: #d65c14;
-        }
-    </style>
-
 </head>
 
 <body>
-
+    
     <div class="navbar" style="background-color: #555555; color:white;">
         <div class="col-md-1"></div>
         <div class="col-md-1">
-            <img src="<?php echo base_url(); ?>/img/img1.png" alt="logo" class="img-responsive" style=" margin-top:10%;">
+            <img src="<?php echo base_url(); ?>/img/img1.png" alt="logo" style=" margin-top:10%;">
         </div>
         <div class="col-md-10">
             <h2>Gastroenterology Research Laboratory</h2>
@@ -65,9 +57,9 @@
     <nav class="navbar navbar-default" style=" margin-top:-2%;" >
         <div class="container">
             <ul class="nav navbar-nav" style="padding-left:1%;">
-                <li class="active"><a href="<?php echo base_url(); ?>/index.php/Login_Controller">Home</a></li>
+                <li><a href="<?php echo base_url(); ?>/index.php/Login_Controller">Home</a></li>
                 <li><a href="<?php echo base_url(); ?>/index.php/Login_Controller/loadWhyUs">Why Us</a></li>
-                <li><a href="<?php echo base_url(); ?>/index.php/Login_Controller/loadAboutUs">About Us</a></li>
+                <li class="active"><a href="<?php echo base_url(); ?>/index.php/Login_Controller/loadAboutUs">About Us</a></li>
                 <li><a href="<?php echo base_url(); ?>/index.php/Login_Controller/loadContact">Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" style="float: right; margin-right: 5%;">
@@ -101,22 +93,49 @@
         </div>
     </nav>
 
-
     <div class="container">
-        <div class="col-md-9">
-            <img src="<?php echo base_url(); ?>/img/11.jpg" alt="" id="1" class="img-responsive">
-        </div>
-        <div class="col-md-3" style="text-align: justify;">
+        
+        <div class="col-md-8" style="text-align: justify; font-size: 1em;">
             <div class="box">
-                <br>
-                <p style="font-size: 1.2em">The Gastroenterology Reasearch Laboratory of the Department of Physiology is a modern and well-equipped laboratory, located at the Faculty of Medicine, University of Kelaniya. This laboratory offers gastric function assessment for both adults and children for diagnosis and follow ups. The tests are performed and results are interpreted by a specialist physiologist.</p> 
-
-                <!-- <p>Gastric function tests, though important in the diagnosis, management and follow-up of patients with gastro intestinal diseases and patients at risk for the development of gastro intestinal impairment is not routinely used due to lack of availability, expertise and cost</p> -->
+            <br>
+            <p >The Gastroenterology Reasearch Laboratory of the Department of Physiology is a modern and well-equipped laboratory, located at the Faculty of Medicine, University of Kelaniya. This laboratory offers gastric function assessment for both adults and children for diagnosis and follow ups. The tests are performed and results are interpreted by a specialist physiologist.</p> 
+            <p>Gastric function tests, though important in the diagnosis, management, and follow-up of patients with gastro intestinal diseases and patients at risk for the development of gastro intestinal impairment is not routinely used due to lack of availability, expertise and cost.</p>
+            <!-- <p>This laboratory was established with the aim of fulfilling three main tasks</p>
+            <ul>
+                <li>Providing quality diagnostic services</li>
+                <li>Improving teaching</li>
+                <li>Enhancing research in the field of gastro intestinal physiology</li>
+            </ul> -->
+            <!-- <p>The laboratory envisions</p>
+            <ul>
+                <li>Improving teaching related to gastro intestinal physiology</li>
+                <li>Working towards increasing research output of the faculty related to gastro intestinal physiology</li>
+                <li>Enhancing research opportunities and quality of research related to gastro intestinal physiology</li>
+                <li>Establishing collaborations with other faculties and institutions with similar interests</li>
+            </ul> -->
             </div>
         </div>
-    </div> 
+        <div class="col-md-4">
+            <img src="<?php echo base_url(); ?>/img/fac.jpg" alt="" id="1" class="img-responsive" style="height:150%;">
+        </div>
+        <div class="col-md-12" style="text-align: justify; font-size: 1em;">
+            <div class="box">
+            <p>The laboratory is currently involed in:</p>
+            <ul>
+                <li style="color: red"><b>Service Function</b></li>
+                <p>This is the only laboratory in the country with facilities to investigate gastric motility and intestinal transit using non invaasive techniques. This laboratory provides to patients reffered from government and private medical institutions.</p>
+                <li style="color: red"><b>Research</b></li>
+                <p>Research carried out in this laboratory is mainly translational and focuses on improving the quality of life of patients with gastrointestinal disorders. Current resarch activities of the laboratory are mainly related to gastrointestinal motor functions in health and disease, gastro-paresis and functional gastrointestinal disorders.</p>
+                <li style="color: red"><b>Postgraduate Training</b></li>
+                <p>One of the objectivess of the laboratory is to provide facilities for postgraduate students reading for MPils, MDs and PhDs in gastrointestinal physiology.</p>
+            </ul>
+            <br>
+            <p>The laboratory charges a fee for the investigations provided. The maintenance and expansion of the laboratory is carried out with funds generated by the laboratory, research grants and donations.</p>
+            </div>
+        </div>
+        
+    </div>
 
-    
 </body>
 
 </html>

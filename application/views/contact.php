@@ -12,7 +12,7 @@
     <meta name="keywords" content="">
 
     <title>
-        Medi
+        Contact Us
     </title>
 
     <meta name="keywords" content="">
@@ -39,22 +39,14 @@
     <script src="<?php echo base_url(); ?>/js/respond.min.js"></script>
 
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/img/icon.png">
-
-    <style>
-        .nav .navbar-nav > .active{
-            color: #000;
-           background: #d65c14;
-        }
-    </style>
-
 </head>
 
 <body>
-
+    
     <div class="navbar" style="background-color: #555555; color:white;">
         <div class="col-md-1"></div>
         <div class="col-md-1">
-            <img src="<?php echo base_url(); ?>/img/img1.png" alt="logo" class="img-responsive" style=" margin-top:10%;">
+            <img src="<?php echo base_url(); ?>/img/img1.png" alt="logo" style=" margin-top:10%;">
         </div>
         <div class="col-md-10">
             <h2>Gastroenterology Research Laboratory</h2>
@@ -65,10 +57,10 @@
     <nav class="navbar navbar-default" style=" margin-top:-2%;" >
         <div class="container">
             <ul class="nav navbar-nav" style="padding-left:1%;">
-                <li class="active"><a href="<?php echo base_url(); ?>/index.php/Login_Controller">Home</a></li>
+                <li><a href="<?php echo base_url(); ?>/index.php/Login_Controller">Home</a></li>
                 <li><a href="<?php echo base_url(); ?>/index.php/Login_Controller/loadWhyUs">Why Us</a></li>
                 <li><a href="<?php echo base_url(); ?>/index.php/Login_Controller/loadAboutUs">About Us</a></li>
-                <li><a href="<?php echo base_url(); ?>/index.php/Login_Controller/loadContact">Contact Us</a></li>
+                <li class="active"><a href="<?php echo base_url(); ?>/index.php/Login_Controller/loadContact">Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" style="float: right; margin-right: 5%;">
                 <a href="#" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#login-modal">Login</a>
@@ -101,22 +93,49 @@
         </div>
     </nav>
 
-
     <div class="container">
-        <div class="col-md-9">
-            <img src="<?php echo base_url(); ?>/img/11.jpg" alt="" id="1" class="img-responsive">
-        </div>
-        <div class="col-md-3" style="text-align: justify;">
-            <div class="box">
-                <br>
-                <p style="font-size: 1.2em">The Gastroenterology Reasearch Laboratory of the Department of Physiology is a modern and well-equipped laboratory, located at the Faculty of Medicine, University of Kelaniya. This laboratory offers gastric function assessment for both adults and children for diagnosis and follow ups. The tests are performed and results are interpreted by a specialist physiologist.</p> 
 
-                <!-- <p>Gastric function tests, though important in the diagnosis, management and follow-up of patients with gastro intestinal diseases and patients at risk for the development of gastro intestinal impairment is not routinely used due to lack of availability, expertise and cost</p> -->
+        <div class="col-md-6">
+            <div class="box">
+                <h3 style="font-size: 1.2em; color:red">CONTACT US</h3>
+                <I>Address:</I>
+                    <p style="margin-left: 20%;">Gastroenterology Research Laboratory,<br>Department of Physiology,<br>Faculty of Medicine,<br>University of Kelaniya<br>Thalagolla Road, Ragama Sri Lanka. 11010</p>
+                <I>Telephone:</I>
+                    <p style="margin-left: 20%;">+94-11-4012395</p>
+                <I>Fax:</I>
+                    <p style="margin-left: 20%;">+94-11-2958337</p>
             </div>
         </div>
-    </div> 
 
-    
+        <div class="col-md-6">
+            <div class="row" style="background-color: white;">
+                <div class="col-md-4">
+                    <br>
+                    <img src="<?php echo base_url(); ?>/img/user.png" alt="" id="1" class="img-responsive" style="height:150%;">
+                    <br>
+                </div>           
+                <div class="col-md-8">
+                    <br>
+                    <h4 style="color:red;">Dr. Darshana Fernando</h4>
+                    <p>MBBS(Colombo), Doctor of Medicine (Kelaniya)<br>Senior Lecturer</p>
+                </div>
+            </div>
+
+            <div class="row" style="background-color: white;">
+                <div class="col-md-4">
+                    <img src="<?php echo base_url(); ?>/img/user.png" alt="" id="1" class="img-responsive" style="height:150%;">
+                    <br>
+                </div>
+                <div class="col-md-8">
+                    <br>
+                    <h4 style="color:red;">Ms. Hansika Bogahapitiya</h4>
+                    <p>Designation : Techhnical Officer Gr.II</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 
 </html>

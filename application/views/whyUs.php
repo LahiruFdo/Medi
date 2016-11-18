@@ -12,7 +12,7 @@
     <meta name="keywords" content="">
 
     <title>
-        Medi
+        Why Us
     </title>
 
     <meta name="keywords" content="">
@@ -40,21 +40,14 @@
 
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/img/icon.png">
 
-    <style>
-        .nav .navbar-nav > .active{
-            color: #000;
-           background: #d65c14;
-        }
-    </style>
-
 </head>
 
 <body>
-
+    
     <div class="navbar" style="background-color: #555555; color:white;">
         <div class="col-md-1"></div>
         <div class="col-md-1">
-            <img src="<?php echo base_url(); ?>/img/img1.png" alt="logo" class="img-responsive" style=" margin-top:10%;">
+            <img src="<?php echo base_url(); ?>/img/img1.png" alt="logo" style=" margin-top:10%;">
         </div>
         <div class="col-md-10">
             <h2>Gastroenterology Research Laboratory</h2>
@@ -65,8 +58,8 @@
     <nav class="navbar navbar-default" style=" margin-top:-2%;" >
         <div class="container">
             <ul class="nav navbar-nav" style="padding-left:1%;">
-                <li class="active"><a href="<?php echo base_url(); ?>/index.php/Login_Controller">Home</a></li>
-                <li><a href="<?php echo base_url(); ?>/index.php/Login_Controller/loadWhyUs">Why Us</a></li>
+                <li><a href="<?php echo base_url(); ?>/index.php/Login_Controller">Home</a></li>
+                <li class="active"><a href="<?php echo base_url(); ?>/index.php/Login_Controller/loadWhyUs">Why Us</a></li>
                 <li><a href="<?php echo base_url(); ?>/index.php/Login_Controller/loadAboutUs">About Us</a></li>
                 <li><a href="<?php echo base_url(); ?>/index.php/Login_Controller/loadContact">Contact Us</a></li>
             </ul>
@@ -101,22 +94,34 @@
         </div>
     </nav>
 
-
     <div class="container">
-        <div class="col-md-9">
-            <img src="<?php echo base_url(); ?>/img/11.jpg" alt="" id="1" class="img-responsive">
+        
+        <div class="col-md-4">
+            <img src="<?php echo base_url(); ?>/img/whyus.jpg" alt="" id="1" class="img-responsive">
         </div>
-        <div class="col-md-3" style="text-align: justify;">
-            <div class="box">
-                <br>
-                <p style="font-size: 1.2em">The Gastroenterology Reasearch Laboratory of the Department of Physiology is a modern and well-equipped laboratory, located at the Faculty of Medicine, University of Kelaniya. This laboratory offers gastric function assessment for both adults and children for diagnosis and follow ups. The tests are performed and results are interpreted by a specialist physiologist.</p> 
 
-                <!-- <p>Gastric function tests, though important in the diagnosis, management and follow-up of patients with gastro intestinal diseases and patients at risk for the development of gastro intestinal impairment is not routinely used due to lack of availability, expertise and cost</p> -->
+        <div class="col-md-8" style="text-align: justify; font-size: 1.0em;">
+            <div class="box">
+                <h3>SERVICES</h3>
+                <p>Investigations performed in the laboratory are</p>
+                <ul>
+                    <li>Gastric emptying ultrasound</li>
+                    <li>Whole gut transit time ( only issue tablets, x-rays are taken from relevant hospitals )</li>
+                </ul>
+                <br>
+                <p>The laboratory envisions</p>
+                <ul>
+                    <li>Improving teaching related to gastro intestinal physiology</li>
+                    <li>Working towards increasing research output of the faculty related to gastro intestinal physiology</li>
+                    <li>Enhancing research opportunities and quality of research related to gastro intestinal physiology</li>
+                    <li>Establishing collaborations with other faculties and institutions with similar interests</li>
+                </ul>
+                <br><br>
             </div>
         </div>
-    </div> 
 
-    
+    </div>
+
 </body>
 
 </html>
