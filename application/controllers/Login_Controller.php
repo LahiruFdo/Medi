@@ -16,6 +16,12 @@
 		public function loadContact(){
 			$this->load->view('contact');
 		}
+
+		public function loadUserPages(){
+			$user['name'] = "Administrator Panel";
+			$this->load->view('header',$user);
+			$this->load->view('admin');
+		}
 	}
 
 ?>
