@@ -20,25 +20,25 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
 
     <!-- styles -->
-    <link href="<?php echo base_url(); ?>/css/font-awesome.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/css/animate.min.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/css/owl.carousel.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/css/owl.theme.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/animate.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/owl.carousel.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/owl.theme.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- theme stylesheet -->
-    <link href="<?php echo base_url(); ?>/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
     <!-- your stylesheet with modifications -->
-    <link href="<?php echo base_url(); ?>/css/custom.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/custom.css" rel="stylesheet">
 
-    <script src="<?php echo base_url(); ?>/js/respond.min.js"></script>
+    <script src="<?php echo base_url(); ?>/public/js/respond.min.js"></script>
 
-    <link rel="shortcut icon" href="<?php echo base_url(); ?>/img/icon.png">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>/public/img/icon.png">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
     <div class="navbar" style="background-color: #555555; color:white;">
         <div class="col-md-1"></div>
         <div class="col-md-1">
-            <img src="<?php echo base_url(); ?>/img/img1.png" alt="logo" style=" margin-top:10%;">
+            <img src="<?php echo base_url(); ?>/public/img/img1.png" alt="logo" style=" margin-top:10%;">
         </div>
         <div class="col-md-10">
             <h2>Gastroenterology Research Laboratory</h2>
@@ -74,7 +74,7 @@
                             <h4 class="modal-title" id="Login">Login</h4>
                         </div>
                         <div class="modal-body">
-                            <form action="customer-orders.html" method="post">
+                            <?php echo form_open('User_Controller/userLogin'); ?>
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="username" name="username" placeholder="username">
                                 </div>
@@ -85,7 +85,7 @@
                                 <p class="text-center">
                                     <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
                                 </p>
-                            </form>
+                            <?php echo form_close(); ?>
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
             <div class="row" style="background-color: white;">
                 <div class="col-md-4">
                     <br>
-                    <img src="<?php echo base_url(); ?>/img/user.png" alt="" id="1" class="img-responsive" style="height:150%;">
+                    <img src="<?php echo base_url(); ?>/public/img/user.png" alt="" id="1" class="img-responsive" style="height:150%;">
                     <br>
                 </div>           
                 <div class="col-md-8">
@@ -123,7 +123,7 @@
 
             <div class="row" style="background-color: white;">
                 <div class="col-md-4">
-                    <img src="<?php echo base_url(); ?>/img/user.png" alt="" id="1" class="img-responsive" style="height:150%;">
+                    <img src="<?php echo base_url(); ?>/public/img/user.png" alt="" id="1" class="img-responsive" style="height:150%;">
                     <br>
                 </div>
                 <div class="col-md-8">

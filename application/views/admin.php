@@ -20,25 +20,25 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
 
     <!-- styles -->
-    <link href="<?php echo base_url(); ?>/css/font-awesome.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/css/animate.min.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/css/owl.carousel.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/css/owl.theme.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/animate.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/owl.carousel.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/owl.theme.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- theme stylesheet -->
-    <link href="<?php echo base_url(); ?>/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="<?php echo base_url(); ?>/public/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
     <!-- your stylesheet with modifications -->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/public/css/custom.css">
 
-    <script src="<?php echo base_url(); ?>/js/respond.min.js"></script>
+    <script src="<?php echo base_url(); ?>/public/js/respond.min.js"></script>
 
-    <link rel="shortcut icon" href="<?php echo base_url(); ?>/img/icon.png">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>/public/img/icon.png">
 
     <style>
         .table a{
@@ -102,7 +102,7 @@
 
     <div class="col-md-2">
         <a href="#1" data-toggle="modal" data-target="#login-modal">
-            <div class="box" style="background: #50C0A8; color:#fff; font-size: 1.2em;">
+            <div class="box" style="background: #6FCEE4; color:#fff; font-size: 1.2em;">
                 <center><i class="fa fa-bell fa-2x"></i></center>
                 <center>Add Notifications</center>
             </div>
@@ -133,7 +133,7 @@
 
     <div class="col-md-2">
         <a href="#2">
-            <div class="box" style="background: #50C0A8; color:#fff; font-size: 1.2em;">
+            <div class="box" style="background: #6FCEE4; color:#fff; font-size: 1.2em;">
                 <center><i class="fa fa-user fa-2x"></i></center>
                 <center>Add New User</center>
             </div>
@@ -142,7 +142,7 @@
 
     <div class="col-md-2">
         <a href="#3">
-            <div class="box" style="background: #50C0A8; color:#fff; font-size: 1.2em;">
+            <div class="box" style="background: #6FCEE4; color:#fff; font-size: 1.2em;">
                 <center><i class="fa fa-calendar fa-2x"></i></center>
                 <center>Add Events</center>
             </div>
@@ -151,7 +151,7 @@
 
     <div class="col-md-2">
         <a href="#4">
-            <div class="box" style="background: #50C0A8; color:#fff; font-size: 1.2em;">
+            <div class="box" style="background: #6FCEE4; color:#fff; font-size: 1.2em;">
                 <center><i class="fa fa-users fa-2x"></i></center>
                 <center>Contacts</center>
             </div>
@@ -161,18 +161,27 @@
     <div class="col-md-6">
         <div class="box">
             <div class="panel-heading">
-                <h4 class="panel-title">Users</h4>
+                <h4 class="panel-title">Users</h4><?php //echo $doctors[0]->staff_id;?>
             </div>
             <table class="table table-bordered table-inverse" style="background-color: #A2B9B4;">
                 <tr><th> UserID </th><th> Name </th><th> User Roll </th><th> UserName </th></tr>
-                <tr><td><a href="#">1101</a></td><td><a href="#">Darshana Fernando</a></td><td>Doctor</td><td>darshanaFdo</td></tr>
+
+                <?php foreach($doctors as $person):?>
+                        <tr><td><a href="#"><?php echo $person->staff_id;?></a></td><td><a href="#"><?php echo "Dr. "?><?php echo $person->firstName." ";?><?php echo $person->lastName." ";?></a></td><td>Doctor</td><td><?php echo $person->user_name;?></td></tr>
+                <?php endforeach;?>
+
+                <?php foreach($demos as $person):?>
+                        <tr><td><a href="#"><?php echo $person->staff_id;?></a></td><td><a href="#"><?php echo $person->firstName." ";?><?php echo $person->lastName." ";?></a></td><td>Technical Officer</td><td><?php echo $person->user_name;?></td></tr>
+                <?php endforeach;?>
+                    
+                <!-- <tr><td><a href="#">1101</a></td><td><a href="#">Darshana Fernando</a></td><td>Doctor</td><td>darshanaFdo</td></tr>
                 <tr><td><a href="#">1151</a></td><td><a href="#">Madhawa Lakmal</a></td><td>Doctor</td><td>lakmalM</td></tr>
                 <tr><td><a href="#">1186</a></td><td><a href="#">Hansika Bogahapitiya</a></td><td>Technical Officer</td><td>Hbgh</td></tr>
                 <tr><td><a href="#">1256</a></td><td><a href="#">Supun Karunaratne</a></td><td>Technical Officer</td><td>supunD</td></tr>
                 <tr><td><a href="#">1287</a></td><td><a href="#">Nipun Jayaratne</a></td><td>Technical Officer</td><td>nipunD</td></tr>
                 <tr><td><a href="#">1332</a></td><td><a href="#">A A Jayakody</a></td><td>Admin</td><td>AAjay</td></tr>
                 <tr><td><a href="#">1415</a></td><td><a href="#">T A Mohottige</a></td><td>Receptionist</td><td>TAMohottige</td></tr>
-                <tr><td><a href="#">1462</a></td><td><a href="#">W L D Fernando</a></td><td>Receptionist</td><td>wldfdo</td></tr>
+                <tr><td><a href="#">1462</a></td><td><a href="#">W L D Fernando</a></td><td>Receptionist</td><td>wldfdo</td></tr> -->
             </table>
         </div>
     </div>
