@@ -75,13 +75,18 @@
             <div class="col-md-12"></div>
             <div class="col-md-12"></div>
             <div class="col-md-12"></div>
-            <div class="col-md-12"></div>
-            <div class="col-md-12"></div>
-            <div class="col-md-12"></div>
             <img class="img-circle img-thumbnail img-responsive" alt="Brand" src="<?php if($user == "admin"){echo base_url()."/public/img/user.png";} ?>" style="height:40px; width: 40px;">
-            <a href="index.html" style="margin-left:5%;" style="padding-right: 0%;"><?php echo $name; ?></a> 
+            <a href="index.html" style="margin-left:5%; padding-right: 0%; color:#fff;"><?php echo $name; ?></a> 
         </div>
     </nav>
+
+    <div class="col-md-1" style="float:right; margin-top: -4.5%; z-index: 555;"> 
+        <!-- <a href="#">LogOut</a> -->
+        <?php echo anchor('Login_Controller/logout', 'LogOut'); ?>
+    </div>
+    <!-- <div class="profInfo">
+
+    </div> -->
     <!-- End of Navigation Bar -->  
 
 </body>

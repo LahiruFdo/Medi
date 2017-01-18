@@ -82,7 +82,7 @@
                             <h4 class="modal-title" id="Login">Login</h4>
                         </div>
                         <div class="modal-body">
-                            <?php echo form_open('User_Controller/userLogin'); ?>
+                            <?php echo form_open(base_url().'index.php/User_Controller/userLogin'); ?>
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="username" name="username" placeholder="username">
                                 </div>

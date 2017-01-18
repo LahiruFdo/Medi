@@ -23,6 +23,7 @@
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
 
+
 			if(($username == "")||($password == "")){
 				$this->load->view('login');
 			}
@@ -47,9 +48,10 @@
 					$userProfile['doctors'] = $doctors;
 					$userProfile['demos'] = $demos;
 
-					//$this->session->set_userdata('logged_in', $userProfile);
+					$this->session->set_userdata($userProfile);
 					$this->load->view('header',$userProfile);
-					$this->load->view('admin');					
+					$this->load->view('admin');
+					//header('location:index.php');					
 				}
 				else if($result=="doctor"){
 					$userData = $this->login_Authenticate->getDoctorData($username);
@@ -62,7 +64,7 @@
 					$userProfile['title'] = $userData[0]->professionalTitle;
 					//$userProfile['image'] = $userData[0]->photo;
 									
-					$this->session->set_userdata('logged_in', $userProfile);
+					//$this->session->set_userdata('logged_in', $userProfile);
 					$this->load->view('doctor',$userProfile);
 				}
 				else if($result=="demonstrator"){

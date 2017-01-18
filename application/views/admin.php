@@ -86,9 +86,9 @@
             </div>
             <br>
             <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#"><i class="fa fa-home"></i> My Home</a></li>
-                <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li><br>
-                <li><a href="#"><i class="fa fa-user"></i> User Info</a></li>
+                <li class="active"><a href="<?php echo base_url()."/index.php/Admin_Controller/home"; ?>"><i class="fa fa-home"></i> My Home</a></li>
+                <li><a href="<?php echo base_url()."/index.php/Admin_Controller/calendar"; ?>"><i class="fa fa-calendar"></i> Calendar</a></li><br>
+                <li><a href="<?php echo base_url()."/index.php/Admin_Controller/userInfo"; ?>"><i class="fa fa-user"></i> User Info</a></li>
                 <li><a href="#"><i class="fa fa-user-md"></i> Patients' Records</a></li>
                 <li><a href="#"><i class="fa fa-book"></i> Doctors' Roster</a></li>
                 <li><a href="#"><i class="fa fa-tasks"></i> Workers Allocation</a></li>
@@ -101,7 +101,7 @@
 
 
     <div class="col-md-2">
-        <a href="#1" data-toggle="modal" data-target="#login-modal">
+        <a href="#1" data-toggle="modal" data-target="#notice-modal">
             <div class="box" style="background: #6FCEE4; color:#fff; font-size: 1.2em;">
                 <center><i class="fa fa-bell fa-2x"></i></center>
                 <center>Add Notifications</center>
@@ -109,7 +109,7 @@
         </a>
     </div>
 
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login">
+    <div class="modal fade" id="notice-modal" tabindex="-1" role="dialog" aria-labelledby="Login">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
@@ -117,22 +117,26 @@
                     <center><h4 class="modal-title" id="Login">New Notification</h4></center>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="post">
+                    <?php echo form_open('Admin_Controller/addNotice'); ?>
                         <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" id="titlee" name="title" placeholder="enter the title"/><br>
                             <label>Add your notification</label>
-                            <textarea class="form-control" row="10" style="resize:none; height:2" placeholder="Type Here"></textarea>
+                            <textarea class="form-control" name="notice" row="10" style="resize:none; height:2" placeholder="Type Here"></textarea><br>
+                            <label>End Date</label>
+                            <input type="date" class="form-control" id="endDate" name="endDate" placeholder="enter the end date"/>
                         </div>
                         <p class="text-center">
-                            <button class="btn btn-primary">Save</button>
+                            <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Add</button>
                         </p>
-                    </form>
+                    <?php echo form_close(); ?>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="col-md-2">
-        <a href="#2">
+        <a href="<?php echo base_url()."/index.php/Admin_Controller/userRegistration"; ?>">
             <div class="box" style="background: #6FCEE4; color:#fff; font-size: 1.2em;">
                 <center><i class="fa fa-user fa-2x"></i></center>
                 <center>Add New User</center>
@@ -141,7 +145,7 @@
     </div>
 
     <div class="col-md-2">
-        <a href="#3">
+        <a href="#3" data-toggle="modal" data-target="#event-modal">
             <div class="box" style="background: #6FCEE4; color:#fff; font-size: 1.2em;">
                 <center><i class="fa fa-calendar fa-2x"></i></center>
                 <center>Add Events</center>
@@ -149,8 +153,34 @@
         </a>
     </div>
 
+    <div class="modal fade" id="event-modal" tabindex="-1" role="dialog" aria-labelledby="Login">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <center><h4 class="modal-title" id="Login">Add Event</h4></center>
+                </div>
+                <div class="modal-body">
+                    <?php echo form_open('Admin_Controller/addEvent'); ?>
+                        <div class="form-group">
+                            <label>Event Title</label>
+                            <input type="text" class="form-control" id="titlee" name="title" placeholder="enter the title"/><br>
+                            <label>Add Description</label>
+                            <textarea class="form-control" name="notice" row="10" style="resize:none; height:2" placeholder="Type Here"></textarea><br>
+                            <label>Date</label>
+                            <input type="date" class="form-control" id="endDate" name="endDate" placeholder="enter the end date"/>
+                        </div>
+                        <p class="text-center">
+                            <button class="btn btn-primary"><i class="fa fa-sign-in"></i> Add</button>
+                        </p>
+                    <?php echo form_close(); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="col-md-2">
-        <a href="#4">
+        <a href="<?php echo base_url()."/index.php/Admin_Controller/loadContacts"; ?>">
             <div class="box" style="background: #6FCEE4; color:#fff; font-size: 1.2em;">
                 <center><i class="fa fa-users fa-2x"></i></center>
                 <center>Contacts</center>
@@ -161,27 +191,18 @@
     <div class="col-md-6">
         <div class="box">
             <div class="panel-heading">
-                <h4 class="panel-title">Users</h4><?php //echo $doctors[0]->staff_id;?>
+                <h4 class="panel-title">Users</h4>
             </div>
             <table class="table table-bordered table-inverse" style="background-color: #A2B9B4;">
                 <tr><th> UserID </th><th> Name </th><th> User Roll </th><th> UserName </th></tr>
 
-                <?php foreach($doctors as $person):?>
+                <?php foreach($this->session->userdata('doctors') as $person):?>
                         <tr><td><a href="#"><?php echo $person->staff_id;?></a></td><td><a href="#"><?php echo "Dr. "?><?php echo $person->firstName." ";?><?php echo $person->lastName." ";?></a></td><td>Doctor</td><td><?php echo $person->user_name;?></td></tr>
                 <?php endforeach;?>
 
-                <?php foreach($demos as $person):?>
+                <?php foreach($this->session->userdata('demos') as $person):?>
                         <tr><td><a href="#"><?php echo $person->staff_id;?></a></td><td><a href="#"><?php echo $person->firstName." ";?><?php echo $person->lastName." ";?></a></td><td>Technical Officer</td><td><?php echo $person->user_name;?></td></tr>
                 <?php endforeach;?>
-                    
-                <!-- <tr><td><a href="#">1101</a></td><td><a href="#">Darshana Fernando</a></td><td>Doctor</td><td>darshanaFdo</td></tr>
-                <tr><td><a href="#">1151</a></td><td><a href="#">Madhawa Lakmal</a></td><td>Doctor</td><td>lakmalM</td></tr>
-                <tr><td><a href="#">1186</a></td><td><a href="#">Hansika Bogahapitiya</a></td><td>Technical Officer</td><td>Hbgh</td></tr>
-                <tr><td><a href="#">1256</a></td><td><a href="#">Supun Karunaratne</a></td><td>Technical Officer</td><td>supunD</td></tr>
-                <tr><td><a href="#">1287</a></td><td><a href="#">Nipun Jayaratne</a></td><td>Technical Officer</td><td>nipunD</td></tr>
-                <tr><td><a href="#">1332</a></td><td><a href="#">A A Jayakody</a></td><td>Admin</td><td>AAjay</td></tr>
-                <tr><td><a href="#">1415</a></td><td><a href="#">T A Mohottige</a></td><td>Receptionist</td><td>TAMohottige</td></tr>
-                <tr><td><a href="#">1462</a></td><td><a href="#">W L D Fernando</a></td><td>Receptionist</td><td>wldfdo</td></tr> -->
             </table>
         </div>
     </div>

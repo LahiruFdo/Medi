@@ -1,0 +1,56 @@
+.calendar{
+	font-family: Arial;
+	font-size: 12px;
+}
+
+table.calendar{
+	margin:auto;
+	border-collapse: collapse;
+}
+
+.calendar .calendar_days td{
+	width:80px;
+	height: 80px;
+	padding:4px;
+	vertical-align: top;
+	background-color: #A2B9B4;
+	border: 1px solid #fff;
+	font-size: 2em;
+}
+
+.calendar .calendar_days td:hover{
+	background-color: #fff;
+}
+
+.calendar .calendar_highlight{
+	font-weight: bold; color:#fff;
+}
+
+.calendar .butn-left{
+	float:left;
+	font-size: 2.5em;
+	height: 40px;
+	padding-top: 2px;
+}
+
+.calendar .butn-right{
+	float:right;
+	font-size: 2.5em;
+	height: 40px;
+	padding-top: 2px;
+}
+
+.calendar .mid-butn{
+	text-align: center;
+	font-size: 1.5em;
+	border: 2px solid black;
+}
+
+.calendar .week-day{
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color: #fcd;
+	border: 2px solid #fff;
+	height: 40px;
+}
