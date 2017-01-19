@@ -168,56 +168,7 @@
                 
             </table> 
 
-            <!--<form action="" method="post" >
-                    
-
-                        <table>
-                                <h3>Patient's Personal Details</h3>
-                                    <tr>
-                                        <th>Patient Name:</th>
-                                        <th><input type="text" name="patient_name" class="in"></th>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="2" align="right"><button type="submit" class="but">Search</button></th>
-                                    </tr>
-                                        
-                                            
-                            
-                        </table>
-                </form>
-                <br>-->
-        <!--<?php
-            /*require "database/connect.php";
             
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $sql1="SELECT * FROM patient WHERE patient_name='$_POST[patient_name]'";
-                $query=(mysqli_query($connection,$sql1));
-                while($res = mysqli_fetch_assoc($query)) {
-                    
-
-                    echo "<table width='80%' border=0>";
-                    echo "<tr bgcolor='#CCCCCC'>";
-                    echo "<th>Patient_id</th>";
-                    echo "<th>Patient Name</th>";
-                    echo "<th>Telephone_no</th>";
-                    echo "<th>District</th>";
-                    echo "<th>Guardian</th>";
-                    echo "<th>Daignosis</th>";
-                    echo "<th>Update</th>";
-                    echo "</tr>";
-
-                    echo "<tr>";
-                    echo "<th>".$res['patient_id']."</th>";
-                    echo "<th>".$res['patient_name']."</th>";
-                    echo "<th>".$res['telephone_no']."</th>";
-                    echo "<th>".$res['district']."</th>";
-                    echo "<th>".$res['guardian']."</th>";
-                    echo "<th>".$res['diagnosis']."</th>";
-                      
-                    echo "<th><a href=\"patientEdit.php?id=$res[patient_id]\">Edit</a> | <a href=\"patienthelete.php?id=$res[patient_id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></th>";
-                }   
-            }*/
-        ?>-->
 
 
 
