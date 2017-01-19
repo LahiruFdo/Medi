@@ -142,6 +142,7 @@
                 <th>Diagnosis</th>
                 <th>Bed ID</th>
                 <th>Update</th>
+                <th>Delete</th>
             </tr>  
             </thead>
             <?php  
@@ -158,6 +159,7 @@
                 <td><?php echo $data->diagnosis;?></td>
                 <td><?php echo $data->bed_id;?></td>
                 <td><a href="<?php echo site_url("demo_controller/editpatient/{$data->patient_id}"); ?>">Edit</a></td>
+                <td><a href="<?php echo site_url("demo_controller/deletepatient/{$data->patient_id}"); ?>">Delete</a></td>
             </tr> 
             </tbody> 
             <?php 

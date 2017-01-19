@@ -60,8 +60,8 @@
 			
 		}
 
-		public function updatepatient($patient_id)
-	    {
+		public function updatepatient($patient_id){
+	    
 	    $data = array('patient_name'                   => $this->input->post('patient_name'),
 	                  'gender'                         => $this->input->post('gender'),
 	                  'address'                        => $this->input->post('address'),
@@ -84,6 +84,13 @@
 	    $this->db->update('patient', $data);
 	    //$this->session->set_flashdata('message', 'Your data updated Successfully..');
 	    redirect('demo_controller/viewpatient');
+	    }
+
+	    public function deletepatient($patient_id){
+
+	    	
+	    	$this->patient->delete_data($patient_id);
+	    	redirect('demo_controller/viewpatient');
 	    }
 	}
 ?>
