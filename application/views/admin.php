@@ -205,7 +205,7 @@
                         <tr><td><a href="#"><?php echo $person->staff_id;?></a></td><td><a href="#"><?php echo "Dr. "?><?php echo $person->firstName." ";?><?php echo $person->lastName." ";?></a></td><td>Doctor</td><td><?php echo $person->user_name;?></td></tr>
                 <?php endforeach;?>
 
-                <?php foreach($demonstrators as $person):?>
+                <?php foreach($demos as $person):?>
                         <tr><td><a href="#"><?php echo $person->staff_id;?></a></td><td><a href="#"><?php echo $person->firstName." ";?><?php echo $person->lastName." ";?></a></td><td>Technical Officer</td><td><?php echo $person->user_name;?></td></tr>
                 <?php endforeach;?>
             </table>

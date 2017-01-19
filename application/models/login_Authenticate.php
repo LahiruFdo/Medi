@@ -67,17 +67,16 @@
 		public function getDoctorData($username){
 			$this->db->select('*');
 			$this->db->from('doctor_staff');
-			$select = "user_name =" . "'" . $username."'";
-			$this->db->where($select);
+			//$select = " ='".$username."'";
+			$this->db->where('user_name',$username);
 			$query = $this->db->get();
 			return $query->result();
 		}
 
 		public function getDemonstratorData($username){
 			$this->db->select('*');
-			$this->db->from('doctor_staff');
-			$select = "user_name =" . "'" . $username."'";
-			$this->db->where($select);
+			$this->db->from('demo_staff');
+			$this->db->where('user_name',$username);
 			$query = $this->db->get();
 			return $query->result();
 		}

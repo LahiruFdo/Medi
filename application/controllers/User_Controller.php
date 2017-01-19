@@ -62,14 +62,23 @@
 					$userProfile['name'] = $fname." ".$lname;
 					$userProfile['email'] = $userData[0]->email;
 					$userProfile['title'] = $userData[0]->professionalTitle;
-					//$userProfile['image'] = $userData[0]->photo;
 									
 					//$this->session->set_userdata('logged_in', $userProfile);
+					$this->load->view('header',$userProfile);
 					$this->load->view('doctor',$userProfile);
 				}
 				else if($result=="demonstrator"){
 					$userData = $this->login_Authenticate->getDemonstratorData($username);
-					$this->load->view('demonstrator',$userProfile);
+					$fname = $userData[0]->firstName;
+					$lname = $userData[0]->lastName;
+					$userProfile['user'] = "demonstrator";
+					$userProfile['name'] = $fname." ".$lname;
+					$userProfile['email'] = $userData[0]->email;
+					$userProfile['title'] = $userData[0]->professionalTitle;
+									
+					//$this->session->set_userdata('logged_in', $userProfile);
+					$this->load->view('header',$userProfile);
+					$this->load->view('patient/demo',$userProfile);
 				}
 			}
 		}

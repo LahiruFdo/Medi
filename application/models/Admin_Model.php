@@ -19,10 +19,6 @@
 			}
 		}
 
-		public function addNewDemo($nUser){
-			$this->db->"INSERT into demo_staff (staff_id,user_name,proffessionalTitle,firstName,lastName,gender,officialTelephone,personalTelephone,email) VALUES ('$nUser['uID']','$nUser['uname']','$nUser['pType']','$nUser['fname']','$nUser['lname']','$nUser['gender']','$nUser['teleO']','$nUser['teleP']','$nUser['email']')";
-		}
-
 		public function get_cal_data($year,$month){
 			$query = $this->db->select('end_date, title')->from('notice')->like('end_date',"$year-$month", 'after')->get();
 			$cal_data = array();

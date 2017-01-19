@@ -75,7 +75,7 @@
             <div class="col-md-12"></div>
             <div class="col-md-12"></div>
             <div class="col-md-12"></div>
-            <img class="img-circle img-thumbnail img-responsive" alt="Brand" src="<?php if($user == "admin"){echo base_url()."/public/img/user.png";} ?>" style="height:40px; width: 40px;">
+            <img class="img-circle img-thumbnail img-responsive" alt="Brand" src="<?php echo base_url()."/public/img/user.png";?>" style="height:40px; width: 40px;">
             <a href="index.html" style="margin-left:5%; padding-right: 0%; color:#fff;"><?php echo $name; ?></a> 
         </div>
     </nav>
