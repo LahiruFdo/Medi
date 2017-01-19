@@ -105,7 +105,7 @@
         </div>
     </div>
 
-    <form action="insert.php" method="post">
+    <?php echo form_open('Admin_Controller/insertNewUser'); ?>
         <div class="col-md-4" style="background-color: #fff; padding-top: 10px;padding-bottom: 10px; margin-left:16px; border:1px solid #6FCEE4;">
         
             <div class="form-group">
@@ -153,9 +153,14 @@
             </div>
 
             <div class="form-group">
+                <div class="col-md-12"><br><label>User ID :</label></div>
+                <div class="col-md-12"><input type="text" class="form-control" id="pType" name="uID" placeholder="" input required="required"></div>
+            </div>
+
+            <!-- <div class="form-group">
                 <div class="col-md-4"><br><label>Profile Image :</label></div>
                 <div class="col-md-8"><br><input type="file" name="fileToUpload" id="fileToUpload"><br></div>
-            </div>
+            </div> -->
             
         </div>
 
@@ -165,7 +170,7 @@
             <h6>----------------------------------------------------------------------------------------------------------</h6>
             <div class="form-group">
                 <div class="col-md-4"><label>* Certification :</label></div>
-                <div class="col-md-8"><input type="text" class="form-control" id="fname" name="spec" placeholder="certification" style="margin-top:-5px;"></div>
+                <div class="col-md-8"><input type="text" class="form-control" id="fname" name="cert" placeholder="certification" style="margin-top:-5px;"></div>
             </div>
             <div class="form-group">
                 <div class="col-md-4"><br><label>* Specilization :</label></div>
@@ -174,21 +179,21 @@
             <h6>----------------------------------------------------------------------------------------------------------<br><br></h6>
              <div class="form-group">
                 <div class="col-md-5"><label>Username :</label></div>
-                <div class="col-md-7"><input type="text" class="form-control" id="fname" name="spec" placeholder="username" input required="required" style="margin-top:-5px;"><br></div>
+                <div class="col-md-7"><input type="text" class="form-control" id="uname" name="uname" placeholder="username" input required="required" style="margin-top:-5px;"><br></div>
             </div>
             <div class="form-group">
                 <div class="col-md-5"><label>Password :</label></div>
-                <div class="col-md-7"><input type="Password" class="form-control" id="fname" name="spec" placeholder="password" input required="required" style="margin-top:-5px;"><br></div>
+                <div class="col-md-7"><input type="Password" class="form-control" id="pw1" name="pw1" placeholder="password" input required="required" style="margin-top:-5px;"><br></div>
             </div>
             <div class="form-group">
                 <div class="col-md-5"><label>Confirm Password :</label></div>
-                <div class="col-md-7"><input type="Password" class="form-control" id="fname" name="spec" placeholder="confirm password" input required="required" style="margin-top:-5px;"><br><br></div>
+                <div class="col-md-7"><input type="Password" class="form-control" id="pw2" name="pw2" placeholder="confirm password" input required="required" style="margin-top:-5px;"><br><br></div>
             </div>
             <p class="text-center">
                 <button class="btn btn-primary"><i class="fa fa-save"></i> Register</button><br><br><br>
             </p>
         </div>
-    </form>
+    <?php echo form_close(); ?>
 
 </body>
 </html>

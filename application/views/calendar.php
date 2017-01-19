@@ -41,6 +41,8 @@
 
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/public/img/icon.png">
 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -89,5 +91,14 @@
             <?php echo form_close(); ?>
         </div>
     </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.calendar .day').click(function(){
+                day_num = $(this).find('.day_num').html();
+            });
+        });
+
+    </script>
 </body>
 </html>

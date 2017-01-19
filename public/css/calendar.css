@@ -1,6 +1,6 @@
 .calendar{
 	font-family: Arial;
-	font-size: 12px;
+	/*font-size: 12px;*/
 }
 
 table.calendar{
@@ -15,7 +15,12 @@ table.calendar{
 	vertical-align: top;
 	background-color: #A2B9B4;
 	border: 1px solid #fff;
-	font-size: 2em;
+	font-size: 1.8em;
+}
+
+.calendar .calendar_content{
+	font-size: 0.6em;
+	color: #6f1515;
 }
 
 .calendar .calendar_days td:hover{
@@ -23,7 +28,7 @@ table.calendar{
 }
 
 .calendar .calendar_highlight{
-	font-weight: bold; color:#fff;
+	font-weight: bold; color:#6f1515;
 }
 
 .calendar .butn-left{

@@ -19,14 +19,24 @@
 			}
 		}
 
-		public function generate_Calendar(){
+		public function addNewDemo($nUser){
+			$this->db->"INSERT into demo_staff (staff_id,user_name,proffessionalTitle,firstName,lastName,gender,officialTelephone,personalTelephone,email) VALUES ('$nUser['uID']','$nUser['uname']','$nUser['pType']','$nUser['fname']','$nUser['lname']','$nUser['gender']','$nUser['teleO']','$nUser['teleP']','$nUser['email']')";
+		}
 
-			$year = date("Y");
-			$month = date("m");
+		public function get_cal_data($year,$month){
+			$query = $this->db->select('end_date, title')->from('notice')->like('end_date',"$year-$month", 'after')->get();
+			$cal_data = array();
+			foreach($query->result() as $row){
+				$cal_data[substr($row->end_date,8,2)] = $row->title;
+			}
+			return $cal_data;
+		}
+
+		public function generate_Calendar($year,$month){
 			$conf = array(
-					'start_day' => 'Monday',
+					'start_day' => 'monday',
 					'show_next_prev' => true ,
-					'next_prev_url' => base_url().'Admin_Controller/calendar',
+					'next_prev_url' => base_url().'/index.php/Admin_Controller/calendar',
 					
 				);
 			$conf['template'] = '
@@ -46,7 +56,7 @@
 		           {week_row_end}</tr>{/week_row_end}
 
 		           {cal_row_start}<tr class="calendar_days">{/cal_row_start}
-		           {cal_cell_start}<td>{/cal_cell_start}
+		           {cal_cell_start}<td class="day">{/cal_cell_start}
 
 		           {cal_cell_content}
 		                <div class="calendar_day_num">{day}</div>
@@ -68,7 +78,10 @@
 		           {table_close}</table>{/table_close}
 		    ';
 			$this->load->library('calendar',$conf);
-			return $this->calendar->generate($year, $month);
+
+			$cal_data = $this->get_cal_data($year,$month);
+
+			return $this->calendar->generate($year, $month, $cal_data);
 		}
 	}
 

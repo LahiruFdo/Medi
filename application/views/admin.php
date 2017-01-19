@@ -1,3 +1,8 @@
+<?php
+    $year = date('Y');
+    $month = date('m');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,7 +92,7 @@
             <br>
             <ul class="nav nav-pills nav-stacked">
                 <li class="active"><a href="<?php echo base_url()."/index.php/Admin_Controller/home"; ?>"><i class="fa fa-home"></i> My Home</a></li>
-                <li><a href="<?php echo base_url()."/index.php/Admin_Controller/calendar"; ?>"><i class="fa fa-calendar"></i> Calendar</a></li><br>
+                <li><a href="<?php echo base_url()."/index.php/Admin_Controller/calendar/".$year."/".$month; ?>"><i class="fa fa-calendar"></i> Calendar</a></li><br>
                 <li><a href="<?php echo base_url()."/index.php/Admin_Controller/userInfo"; ?>"><i class="fa fa-user"></i> User Info</a></li>
                 <li><a href="#"><i class="fa fa-user-md"></i> Patients' Records</a></li>
                 <li><a href="#"><i class="fa fa-book"></i> Doctors' Roster</a></li>
@@ -161,7 +166,7 @@
                     <center><h4 class="modal-title" id="Login">Add Event</h4></center>
                 </div>
                 <div class="modal-body">
-                    <?php echo form_open('Admin_Controller/addEvent'); ?>
+                    <?php echo form_open('Admin_Controller/addNotice'); ?>
                         <div class="form-group">
                             <label>Event Title</label>
                             <input type="text" class="form-control" id="titlee" name="title" placeholder="enter the title"/><br>
@@ -196,11 +201,11 @@
             <table class="table table-bordered table-inverse" style="background-color: #A2B9B4;">
                 <tr><th> UserID </th><th> Name </th><th> User Roll </th><th> UserName </th></tr>
 
-                <?php foreach($this->session->userdata('doctors') as $person):?>
+                <?php foreach($doctors as $person):?>
                         <tr><td><a href="#"><?php echo $person->staff_id;?></a></td><td><a href="#"><?php echo "Dr. "?><?php echo $person->firstName." ";?><?php echo $person->lastName." ";?></a></td><td>Doctor</td><td><?php echo $person->user_name;?></td></tr>
                 <?php endforeach;?>
 
-                <?php foreach($this->session->userdata('demos') as $person):?>
+                <?php foreach($demonstrators as $person):?>
                         <tr><td><a href="#"><?php echo $person->staff_id;?></a></td><td><a href="#"><?php echo $person->firstName." ";?><?php echo $person->lastName." ";?></a></td><td>Technical Officer</td><td><?php echo $person->user_name;?></td></tr>
                 <?php endforeach;?>
             </table>

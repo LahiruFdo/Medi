@@ -109,7 +109,7 @@
             <table class="table table-bordered table-inverse" style="background-color: #A2B9B4;">
                 <tr><th> UserID </th><th> Name </th><th> Title </th><th> Specialization </th><th> UserName </th><th></th><th></th></tr>
 
-                <?php foreach($this->session->userdata('doctors') as $person):?>
+                <?php foreach($doctors as $person):?>
                         <tr><td><?php echo $person->staff_id;?></td><td><?php echo "Dr. "?><?php echo $person->firstName." ";?><?php echo $person->lastName." ";?></td><td><?php echo $person->professionalTitle;?></td><td><?php echo $person->specialization;?></td><td><?php echo $person->user_name;?></td><td><center><button type="button" class="btn btn-success btn-xs">Update</button></center></td><td><center><button type="button" class="btn btn-warning btn-xs">Delete</button></center></td></tr>
                 <?php endforeach;?>    
             </table>
@@ -126,8 +126,8 @@
             </div>
             <table class="table table-bordered table-inverse" style="background-color: #A2B9B4;">
                 <tr><th> UserID </th><th> Name </th><th> Title </th><th> UserName </th><th></th><th></th></tr>
-
-                <?php foreach($this->session->userdata('demos') as $person):?>
+                
+                <?php foreach($demonstrators as $person):?>
                         <tr><td><?php echo $person->staff_id;?></td><td><?php echo $person->firstName." ";?><?php echo $person->lastName." ";?></td><td><?php echo $person->professionalTitle;?></td><td><?php echo $person->user_name;?></td><td><center><button type="button" class="btn btn-success btn-xs">Update</button></center></td><td><center><button type="button" class="btn btn-warning btn-xs">Delete</button></center></td></tr>
                 <?php endforeach;?>    
             </table>
